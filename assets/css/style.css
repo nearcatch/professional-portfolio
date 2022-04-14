@@ -1,0 +1,237 @@
+:root {
+  --primary: darkblue;
+  --secondary: #272727;
+  --tertiary: #d9dcd6;
+  --quaternary: rgb(132, 192, 172);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* default body bg color */
+body {
+  background-color: var(--tertiary);
+  color: var(--secondary);
+}
+
+/* header - background and font */
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px 10px 0px;
+  background-color: var(--secondary);
+  color: var(--tertiary);
+}
+
+header > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: space-between;
+  background-color: var(--quaternary);
+  color: var(--secondary);
+  border-radius: 0px 3px 3px 0px;
+}
+
+header img {
+  height: 125px;
+  padding: 10px;
+}
+
+header h1 {
+  font-size: 32px;
+  display: inline;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* nav links - padding/margin, font, list */
+header nav {
+  padding: 20px;
+  font-family: Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+header nav ul li a {
+  color: var(--quaternary);
+  text-decoration: none;
+  border-bottom: 2px solid var(--quaternary);
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  font-family: Calibri, "Trebuchet MS", sans-serif;
+}
+
+footer h4 {
+  text-align: right;
+  flex: 0 0 100px;
+  border-right: 3px solid var(--secondary);
+  margin-right: 10px;
+  padding: 10px;
+  font-size: 40px;
+}
+
+footer section {
+  padding: 20px;
+  font-family: Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  margin: auto;
+}
+
+footer section ul {
+  list-style-type: none;
+}
+
+footer section ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+footer section ul li a {
+  color: var(--secondary);
+  text-decoration: none;
+  border-bottom: 2px solid var(--secondary);
+}
+
+/* main page content */
+main {
+  display: inline-block;
+  padding: 0px 40px;
+}
+
+.banner {
+  width: 100%;
+  height: 15vh;
+  background: center / cover no-repeat url(../images/blue-banner.jpg);
+}
+
+/* sections under main */
+main > section {
+  display: flex;
+  padding: 50px;
+  font-family: Calibri, "Trebuchet MS", sans-serif;
+}
+
+main > section > h2 {
+  text-align: right;
+  flex: 0 0 100px;
+  border-right: 3px solid var(--secondary);
+  margin-right: 10px;
+  padding: 10px;
+  font-size: 40px;
+}
+
+main > section > p {
+  padding: 10px;
+  margin: auto;
+  text-align: right;
+  line-height: 1.5;
+}
+
+/* work cards */
+.workflex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px;
+  width: 100%;
+}
+
+.workflex .card {
+  display: inline-block;
+  border: 5px solid var(--quaternary);
+  height: 200px;
+  margin: 10px;
+  height: 100px;
+  position: relative;
+  color: var(--secondary);
+  background: center / cover no-repeat url(../images/refactor_crop.jpg);
+  filter: grayscale(50%);
+  transition: filter 0.15s ease-in-out;
+}
+.workflex .card:hover {
+  filter: grayscale(0%);
+}
+
+.workflex .card#tie {
+  background: center / cover no-repeat url(../images/tie-fighter.webp);
+}
+
+.workflex .card#saber {
+  background: center / cover no-repeat url(../images/saber.jpg);
+}
+
+.workflex .card#death-star {
+  background: center / cover no-repeat url(../images/death-star.webp);
+}
+
+.workflex .card#xwing {
+  background: center / cover no-repeat url(../images/x-wing.jpeg);
+}
+
+.workflex .card-caption {
+  position: absolute;
+  bottom: 10px;
+  padding: 5px;
+  background-color: var(--quaternary);
+}
+
+.workflex .card:first-child {
+  width: 100%;
+  height: 250px;
+}
+
+.workflex .card:not(:first-child) {
+  flex: 1 0 45%;
+}
+
+@media screen and (max-width: 992px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  header > div {
+    border-radius: 3px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  header > div {
+    border-radius: 3px;
+  }
+}
