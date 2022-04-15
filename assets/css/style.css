@@ -199,19 +199,19 @@ main > section > p {
   filter: grayscale(0%);
 }
 
-.workflex .card#tie {
+.workflex .card#schedule {
   background: center / cover no-repeat url(../images/hw5.png);
 }
 
-.workflex .card#saber {
+.workflex .card#quiz {
   background: center / cover no-repeat url(../images/hw4.png);
 }
 
-.workflex .card#death-star {
+.workflex .card#pw {
   background: center / cover no-repeat url(../images/hw3.png);
 }
 
-.workflex .card#xwing {
+.workflex .card#refactor {
   background: center / cover no-repeat url(../images/refactor_crop.jpg);
 }
 
